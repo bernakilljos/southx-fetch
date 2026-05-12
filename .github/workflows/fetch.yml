@@ -10,12 +10,8 @@ jobs:
    - name: curl
      run: |
       mkdir -p out
-      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173345/Counter%20Fraud%20Progress%20Report%202025-26.pdf' > out/lcorp0.pdf &
-      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173346/Appendix%201%20-%20Tables%20summarising%20investigation%20activity.pdf' > out/lcorp1.pdf &
-      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173338/Councils%20Response%20to%20Statutory%20Recommendations.pdf' > out/lcorp2.pdf &
-      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173339/Appendix%20A%20-%20Action%20Plan.pdf' > out/lcorp3.pdf &
-      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173255/05.%20Pensions%20Administration%20Performance%20Report%2028%20January%202026.pdf' > out/lcorp4.pdf &
-      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173260/07.%20Pensions%20Overpayment%20and%20Underpayment%20Policy.pdf' > out/lcorp5.pdf &
+      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173124/Clapham%20Sauna%202025%20PAC%20final_.pdf' > out/lplan0.pdf &
+      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173129/346%20Clapham%20Road%20ref%2024-01346-FUL%20PAC%20Report.pdf' > out/lplan1.pdf &
       wait
       ls -l out
    - name: commit
