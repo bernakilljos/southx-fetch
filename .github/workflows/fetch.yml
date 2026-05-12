@@ -10,11 +10,12 @@ jobs:
    - name: curl
      run: |
       mkdir -p out
-      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173488/OSC%20Savings%20Cover%20Report%20-%2026%20January%202026.pdf' > out/lpdf0.pdf &
-      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173489/MTFS2Feb%20Final.pdf' > out/lpdf1.pdf &
-      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173490/Appendix%201%20-%20Saving%20Proposals%202026-30.pdf' > out/lpdf2.pdf &
-      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173491/Appendix%202%20-%20Budget%20Engagement%20Report.pdf' > out/lpdf3.pdf &
-      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173205/FINAL%20OSC%20Developer%20Contributions%20CIL%20NCIL%20and%20s106%20FY25-26%20-%2026.01.26.pdf' > out/lpdf4.pdf &
+      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173345/Counter%20Fraud%20Progress%20Report%202025-26.pdf' > out/lcorp0.pdf &
+      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173346/Appendix%201%20-%20Tables%20summarising%20investigation%20activity.pdf' > out/lcorp1.pdf &
+      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173338/Councils%20Response%20to%20Statutory%20Recommendations.pdf' > out/lcorp2.pdf &
+      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173339/Appendix%20A%20-%20Action%20Plan.pdf' > out/lcorp3.pdf &
+      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173255/05.%20Pensions%20Administration%20Performance%20Report%2028%20January%202026.pdf' > out/lcorp4.pdf &
+      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173260/07.%20Pensions%20Overpayment%20and%20Underpayment%20Policy.pdf' > out/lcorp5.pdf &
       wait
       ls -l out
    - name: commit
