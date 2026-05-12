@@ -10,7 +10,7 @@ jobs:
    - name: curl
      run: |
       mkdir -p out
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/b27108/Statement%20of%20Decisions%2026th-Jan-2026%2016.00%20Cabinet.pdf?T=9' > out/dec.pdf
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/ieListDocuments.aspx?CId=320&MId=10385' > out/lic.html
       ls -l out
    - name: commit
      run: |
