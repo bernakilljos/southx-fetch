@@ -77,4 +77,4 @@ jobs:
       ls -l wands wandspdf wantext
    - name: commit
      run: |
-       git config user.email act@example.com; git config user.name act; git add wands; git commit -m mids || true; git push
+       git config user.email act@example.com; git config user.name act; git add wands wandspdf wantext; git commit -m mids || true; git push
