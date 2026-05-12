@@ -10,8 +10,13 @@ jobs:
    - name: curl
      run: |
       mkdir -p out
-      curl --max-time 300 --connect-timeout 120 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/ieListDocuments.aspx?CId=113&MId=17385' > out/l17385.html || true
+      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173488/OSC%20Savings%20Cover%20Report%20-%2026%20January%202026.pdf' > out/lpdf0.pdf &
+      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173489/MTFS2Feb%20Final.pdf' > out/lpdf1.pdf &
+      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173490/Appendix%201%20-%20Saving%20Proposals%202026-30.pdf' > out/lpdf2.pdf &
+      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173491/Appendix%202%20-%20Budget%20Engagement%20Report.pdf' > out/lpdf3.pdf &
+      curl --max-time 480 --connect-timeout 180 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/documents/s173205/FINAL%20OSC%20Developer%20Contributions%20CIL%20NCIL%20and%20s106%20FY25-26%20-%2026.01.26.pdf' > out/lpdf4.pdf &
+      wait
       ls -l out
    - name: commit
      run: |
-       git config user.email act@example.com; git config user.name act; git add out; git commit -m lambout || true; git push origin lambfast
+       git config user.email act@example.com; git config user.name act; git add out; git commit -m lambout || true; git push origin lfpdf
