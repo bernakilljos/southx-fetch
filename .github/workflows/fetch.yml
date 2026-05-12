@@ -9,10 +9,13 @@ jobs:
    - uses: actions/checkout@v4
    - name: curl
      run: |
-      mkdir -p out
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://moderngov.southwark.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1' > out/southcal.html
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://www.southwark.gov.uk/about-council/how-council-works/council-and-committee-meetings' > out/southpage.html
-      ls -l out
+      mkdir -p wands
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1' > wands/cal.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&C=-1&DD=2026&M=1&D=1&MR=0&CID=0&OT=' > wands/cal1.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&D=1&M=1&YR=2026' > wands/cal2.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&D=20260126' > wands/cal3.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&DD=26&MM=1&YYYY=2026' > wands/cal4.html
+      ls -l wands
    - name: commit
      run: |
-       git config user.email act@example.com; git config user.name act; git add out; git commit -m out || true; git push
+       git config user.email act@example.com; git config user.name act; git add wands; git commit -m out || true; git push
