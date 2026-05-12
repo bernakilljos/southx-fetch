@@ -10,8 +10,8 @@ jobs:
    - name: curl
      run: |
       mkdir -p out
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124887/26-8%20Cabinet%20cover%20report%20Housing%20TFG.pdf' > out/tfcover.pdf
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124888/26-8%20TF%20Group%20Final%20Report%20final%20version.pdf' > out/tfreport.pdf
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124910/Appendix_2_EINA_PMHAP.pdf' > out/eina.pdf
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124926/Recommendation%20Forms.pdf' > out/gforms.pdf
       ls -l out
    - name: commit
      run: |
