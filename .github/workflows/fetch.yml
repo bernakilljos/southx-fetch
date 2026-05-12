@@ -1,4 +1,4 @@
-name: fetch
+name: fetch-south
 on: [push, workflow_dispatch]
 permissions:
  contents: write
@@ -7,12 +7,11 @@ jobs:
    runs-on: ubuntu-latest
    steps:
    - uses: actions/checkout@v4
-   - name: curl
+   - name: fetch
      run: |
-      mkdir -p out
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://moderngov.southwark.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1' > out/southcal.html
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://www.southwark.gov.uk/about-council/how-council-works/council-and-committee-meetings' > out/southpage.html
-      ls -l out
+      pip install beautifulsoup4 requests
+      python script.py
+      ls -l out | head
    - name: commit
      run: |
-       git config user.email act@example.com; git config user.name act; git add out; git commit -m out || true; git push
+      git config user.email act@example.com; git config user.name act; git add out; git commit -m out || true; git push
