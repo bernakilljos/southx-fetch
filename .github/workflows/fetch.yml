@@ -10,8 +10,8 @@ jobs:
    - name: curl
      run: |
       mkdir -p out
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://moderngov.southwark.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1' > out/southcal.html
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://www.southwark.gov.uk/about-council/how-council-works/council-and-committee-meetings' > out/southpage.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&M=1&DD=2026' > out/wcal.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&M=1&DD=2026&NoCookies=1' > out/wcal2.html
       ls -l out
    - name: commit
      run: |
