@@ -10,7 +10,11 @@ jobs:
    - name: curl
      run: |
       mkdir -p out
-      curl --max-time 300 --connect-timeout 120 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/ieListDocuments.aspx?CId=113&MId=17385' > out/l17385.html || true
+      curl --max-time 360 --connect-timeout 120 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/ieListDocuments.aspx?CId=116&MId=17395' > out/l17395.html &
+      curl --max-time 360 --connect-timeout 120 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/ieListDocuments.aspx?CId=600&MId=17465' > out/l17465.html &
+      curl --max-time 360 --connect-timeout 120 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/ieListDocuments.aspx?CId=733&MId=17451' > out/l17451.html &
+      curl --max-time 360 --connect-timeout 120 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/ieListDocuments.aspx?CId=115&MId=17474' > out/l17474.html &
+      wait
       ls -l out
    - name: commit
      run: |
