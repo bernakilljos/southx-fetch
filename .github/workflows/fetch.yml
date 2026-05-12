@@ -10,16 +10,7 @@ jobs:
    - name: curl
      run: |
       mkdir -p out
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124875/Cabinet%20report%20FHF.pdf' > out/firecover.pdf
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124876/Fox%20House%20fire%20Independent%20Review.pdf' > out/firereview.pdf
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124877/26-7%20-%20HRA%20Rent%20Setting%20Report.pdf' > out/hra.pdf
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124884/Housing%20Improvement%20Plan.pdf' > out/hip.pdf
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124885/Final%20Report.pdf' > out/mental.pdf
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124886/OFFICIAL%20Healthy%20Minds%20Action%20Plan.pdf' > out/mind.pdf
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124924/Paper%20No.%2026-18%20Grants%20OSC%20Sub-Committee%20Report%20Round%2031.pdf' > out/grant.pdf
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124925/Appendix%20A%20-%20WGF%20R31%20Summary%20of%20Applications.pdf' > out/grantA.pdf
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s125194/SACRE%20annual%20report%202024-25.pdf' > out/sacrerpt.pdf
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124771/SACRE%20annual%20report%20attainment%20data%2024-25.pdf' > out/sacredata.pdf
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/b27108/Statement%20of%20Decisions%2026th-Jan-2026%2016.00%20Cabinet.pdf?T=9' > out/dec.pdf
       ls -l out
    - name: commit
      run: |
