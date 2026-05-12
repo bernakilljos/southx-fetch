@@ -17,7 +17,64 @@ jobs:
       curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/ieListDocuments.aspx?CId=320&MId=9982' > wands/mid9982.html
       curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/ieListDocuments.aspx?CId=763&MId=9927' > wands/mid9927.html
       curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/ieListDocuments.aspx?CId=320&MId=10385' > wands/mid10385.html
-      ls -l wands
+      mkdir -p wandspdf wantext
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124875/Cabinet%20report%20FHF.pdf' > wandspdf/s124875.pdf
+      pdftotext -layout wandspdf/s124875.pdf wantext/s124875.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124876/Fox%20House%20fire%20Independent%20Review.pdf' > wandspdf/s124876.pdf
+      pdftotext -layout wandspdf/s124876.pdf wantext/s124876.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124887/26-8%20Cabinet%20cover%20report%20Housing%20TFG.pdf' > wandspdf/s124887.pdf
+      pdftotext -layout wandspdf/s124887.pdf wantext/s124887.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124888/26-8%20TF%20Group%20Final%20Report%20final%20version.pdf' > wandspdf/s124888.pdf
+      pdftotext -layout wandspdf/s124888.pdf wantext/s124888.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124884/Housing%20Improvement%20Plan.pdf' > wandspdf/s124884.pdf
+      pdftotext -layout wandspdf/s124884.pdf wantext/s124884.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124877/26-7%20-%20HRA%20Rent%20Setting%20Report.pdf' > wandspdf/s124877.pdf
+      pdftotext -layout wandspdf/s124877.pdf wantext/s124877.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124878/Appendix%20A.pdf' > wandspdf/s124878.pdf
+      pdftotext -layout wandspdf/s124878.pdf wantext/s124878.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124879/Appendix%20B.pdf' > wandspdf/s124879.pdf
+      pdftotext -layout wandspdf/s124879.pdf wantext/s124879.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124880/Appendix%20C.pdf' > wandspdf/s124880.pdf
+      pdftotext -layout wandspdf/s124880.pdf wantext/s124880.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124881/Appendix%20D.pdf' > wandspdf/s124881.pdf
+      pdftotext -layout wandspdf/s124881.pdf wantext/s124881.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124882/Appendix%20E.pdf' > wandspdf/s124882.pdf
+      pdftotext -layout wandspdf/s124882.pdf wantext/s124882.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124883/Appendix%20F.pdf' > wandspdf/s124883.pdf
+      pdftotext -layout wandspdf/s124883.pdf wantext/s124883.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124885/Final%20Report.pdf' > wandspdf/s124885.pdf
+      pdftotext -layout wandspdf/s124885.pdf wantext/s124885.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124886/OFFICIAL%20Healthy%20Minds%20Action%20Plan.pdf' > wandspdf/s124886.pdf
+      pdftotext -layout wandspdf/s124886.pdf wantext/s124886.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124910/Appendix_2_EINA_PMHAP.pdf' > wandspdf/s124910.pdf
+      pdftotext -layout wandspdf/s124910.pdf wantext/s124910.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s125117/Statement%20of%20Decisions.pdf' > wandspdf/s125117.pdf
+      pdftotext -layout wandspdf/s125117.pdf wantext/s125117.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124924/Paper%20No.%2026-18%20Grants%20OSC%20Sub-Committee%20Report%20Round%2031.pdf' > wandspdf/s124924.pdf
+      pdftotext -layout wandspdf/s124924.pdf wantext/s124924.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124925/Appendix%20A%20-%20WGF%20R31%20Summary%20of%20Applications.pdf' > wandspdf/s124925.pdf
+      pdftotext -layout wandspdf/s124925.pdf wantext/s124925.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124926/Recommendation%20Forms.pdf' > wandspdf/s124926.pdf
+      pdftotext -layout wandspdf/s124926.pdf wantext/s124926.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124927/Appendix%20C%20-%20WGF%20Guidance%20Notes.pdf' > wandspdf/s124927.pdf
+      pdftotext -layout wandspdf/s124927.pdf wantext/s124927.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124913/Wandsworth%20-%20Induction.pdf' > wandspdf/s124913.pdf
+      pdftotext -layout wandspdf/s124913.pdf wantext/s124913.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124912/Wandsworth%20-%20Member%20Induction%20and%20Refresher%20Programme.pdf' > wandspdf/s124912.pdf
+      pdftotext -layout wandspdf/s124912.pdf wantext/s124912.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124844/CA_Review_final_report_abridged.pdf' > wandspdf/s124844.pdf
+      pdftotext -layout wandspdf/s124844.pdf wantext/s124844.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124718/Briefing%20Sheet%20for%20Wandsworth.pdf' > wandspdf/s124718.pdf
+      pdftotext -layout wandspdf/s124718.pdf wantext/s124718.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124719/Draft%20G2GV2%20for%20steering%20group%20Dec%202025.pdf' > wandspdf/s124719.pdf
+      pdftotext -layout wandspdf/s124719.pdf wantext/s124719.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124944/26-24%20-%20Report.pdf' > wandspdf/s124944.pdf
+      pdftotext -layout wandspdf/s124944.pdf wantext/s124944.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124945/26-24%20-%20Redacted%20Bundle.pdf' > wandspdf/s124945.pdf
+      pdftotext -layout wandspdf/s124945.pdf wantext/s124945.txt || true
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/documents/s124941/26-25%20-%20Report.pdf' > wandspdf/s124941.pdf
+      pdftotext -layout wandspdf/s124941.pdf wantext/s124941.txt || true
+      ls -l wands wandspdf wantext
    - name: commit
      run: |
        git config user.email act@example.com; git config user.name act; git add wands; git commit -m mids || true; git push
