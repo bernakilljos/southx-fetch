@@ -11,6 +11,11 @@ jobs:
      run: |
       mkdir -p out
       curl -L --retry 3 -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&M=1&Y=2026' > out/lambcal.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/ieListDocuments.aspx?CId=116&MId=17395' > out/l17395.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/ieListDocuments.aspx?CId=113&MId=17385' > out/l17385.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/ieListDocuments.aspx?CId=600&MId=17465' > out/l17465.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/ieListDocuments.aspx?CId=733&MId=17451' > out/l17451.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/ieListDocuments.aspx?CId=115&MId=17474' > out/l17474.html
       ls -l out
    - name: commit
      run: |
