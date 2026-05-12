@@ -10,12 +10,14 @@ jobs:
    - name: curl
      run: |
       mkdir -p wands
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1' > wands/cal.html
       curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&C=-1&DD=2026&M=1&D=1&MR=0&CID=0&OT=' > wands/cal1.html
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&D=1&M=1&YR=2026' > wands/cal2.html
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&D=20260126' > wands/cal3.html
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&DD=26&MM=1&YYYY=2026' > wands/cal4.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/ieListDocuments.aspx?CId=792&MId=10266' > wands/mid10266.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/ieListDocuments.aspx?CId=305&MId=10010' > wands/mid10010.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/ieListDocuments.aspx?CId=511&MId=10115' > wands/mid10115.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/ieListDocuments.aspx?CId=320&MId=9982' > wands/mid9982.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/ieListDocuments.aspx?CId=763&MId=9927' > wands/mid9927.html
+      curl -L --retry 3 -A 'Mozilla/5.0' 'https://democracy.wandsworth.gov.uk/ieListDocuments.aspx?CId=320&MId=10385' > wands/mid10385.html
       ls -l wands
    - name: commit
      run: |
-       git config user.email act@example.com; git config user.name act; git add wands; git commit -m out || true; git push
+       git config user.email act@example.com; git config user.name act; git add wands; git commit -m mids || true; git push
