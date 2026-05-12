@@ -10,8 +10,8 @@ jobs:
    - name: curl
      run: |
       mkdir -p out
-      curl -L --retry 3 -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&M=1&Y=2026' > out/lambcal.html
+      curl --max-time 60 --connect-timeout 20 -L -A 'Mozilla/5.0' 'https://moderngov.lambeth.gov.uk/ieListDocuments.aspx?CId=113&MId=17385' > out/l17385.html || true
       ls -l out
    - name: commit
      run: |
-       git config user.email act@example.com; git config user.name act; git add out; git commit -m lambout || true; git push origin lamb2
+       git config user.email act@example.com; git config user.name act; git add out; git commit -m lambout || true; git push origin lambfast
